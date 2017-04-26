@@ -1,0 +1,86 @@
+.header {
+    margin-bottom: 124px;
+    min-height: 103px;
+    background: rgba(0, 0, 0, 1.5);
+    @media #{$desktop} {
+        text-align: center;
+    }
+    @media #{$tablet} {
+        text-align: center;
+    }
+    @media #{$mobile} {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__logo {
+        margin-top: 27px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    &__descr {
+        display: inline-block;
+        margin: 29px 35px 0 18px;
+        width: 185px;
+        vertical-align: top;
+        @media #{$mobile} {
+            margin: 27px 10px 10px;
+        }
+        p {
+            @include pr-reg(14px, 16px);
+            color: #fff;
+        }
+    }
+    &__nav {
+        display: inline-block;
+        vertical-align: top;
+        @media #{$tablet} {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            text-align: center;
+        }
+        @media #{$mobile} {
+            text-align: center;
+        }
+    }
+    &__tel {
+        display: inline-block;
+        margin: 24px 0 0 50px;
+        vertical-align: top;
+        @media #{$desktop} {
+            display: inline-block;
+            margin: 0 auto 10px;
+        }
+        @media #{$tablet} {
+            margin: 5px;
+            padding-bottom: 15px;
+        }
+        @media #{$mobile} {
+            margin: 10px;
+        }
+        a {
+            @include pr-bold(23px, 30px);
+            position: relative;
+            display: block;
+            color: #00ffa2;
+            &::before {
+                position: absolute;
+                content: '';
+                top: 5px;
+                left: -25px;
+                width: 30px;
+                height: 39px;
+                background: url('../img/ic-tel.png') 0 0 no-repeat;
+                @media #{$mobile} {
+                    content: none;
+                }
+            }
+        }
+    }
+    &__hours {
+        @include pr-bold(10px,
+        18px);
+        padding-left: 41px;
+        color: #fff;
+    }
+}

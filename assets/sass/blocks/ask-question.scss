@@ -1,0 +1,129 @@
+.ask-question {
+    min-height: 439px;
+    background: url('../img/bg-ask-question.jpg') center / cover no-repeat;
+    @media #{$mobile} {
+        min-height: initial;
+        height: auto;
+        padding-bottom: 10px;
+        }
+    h2 {
+        font-size: 0;
+    }
+    &__wrapper {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            right: 307px;
+            bottom: -22px;
+            width: 183px;
+            height: 183px;
+            border: 1px solid #099948;
+            @media #{$tablet} {
+                content: none;
+            }
+            @media #{$mobile} {
+                content: none;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            right: 332px;
+            bottom: -42px;
+            width: 183px;
+            height: 183px;
+            border: 1px solid #099948;
+            @media #{$tablet} {
+                content: none;
+            }
+            @media #{$mobile} {
+                content: none;
+            }
+        }
+    }
+    &__decor {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            right: -27px;
+            bottom: -165px;
+            width: 183px;
+            height: 183px;
+            border: 1px solid #099948;
+            @media #{$desktop} {
+                content: none;
+            }
+            @media #{$tablet} {
+                content: none;
+            }
+            @media #{$mobile} {
+                content: none;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            right: -58px;
+            bottom: -144px;
+            width: 183px;
+            height: 183px;
+            border: 1px solid #099948;
+            @media #{$desktop} {
+                content: none;
+            }
+            @media #{$tablet} {
+                content: none;
+            }
+            @media #{$mobile} {
+                content: none;
+            }
+        }
+    }
+    &__block {
+        position: relative;
+        margin: 95px 0 0px;
+        margin-left: auto;
+        max-width: 464px;
+        width: 100%;
+        border-top: 26px solid #099948;
+        background: #fff;
+        z-index: 1;
+        @media #{$tablet} {
+            margin: 20px auto;
+        }
+        @media #{$mobile} {
+             margin: 20px auto;
+            }
+    }
+    &__inner {
+        padding: 32px 43px 45px 35px;
+        h3 {
+            @include sq-bold(24px, 26px);
+            padding-bottom: 4px;
+            text-align: center;
+            color: #000;
+        }
+        p {
+            @include pr-reg(24px, 26px);
+            padding-bottom: 23px;
+            text-align: center;
+            color: $text;
+        }
+    }
+    &__btn {
+        @include sq-bold(18px, 41px);
+        display: block;
+        margin: 0 auto;
+        width: 249px;
+        height: 41px;
+        text-align: center;
+        color: #fff;
+        background: #099948;
+        transition: .3s;
+        &:hover {
+            background: #005626;
+        } 
+    }
+}

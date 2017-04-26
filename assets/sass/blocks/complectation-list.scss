@@ -1,0 +1,125 @@
+.complectation-list {
+    font-size: 0;
+    text-align: justify;
+    text-justify: newspaper;
+    @media #{$desktop} {
+        text-align: center;
+    }
+    @media #{$tablet} {
+        text-align: center;
+    }
+    &::after {
+        display: inline-block;
+        content: '';
+        width: 100%;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+    &__item {
+        display: inline-block;
+        margin-bottom: 30px;
+        max-width: 372px;
+        width: 100%;
+        height: 324px;
+        border: 1px solid #11ffbd;
+        background: transparent;
+        @media #{$desktop} {
+            margin: 20px;
+        }
+        @media #{$tablet} {
+            margin: 20px;
+        }
+        @media #{$mobile} {
+            display: block;
+            margin: 15px auto;
+        }
+        &:hover {
+            .complectation-list__number,
+            .complectation-list__title, {
+                opacity: 0;
+            }
+            .complectation-list__details {
+                opacity: 1;
+            }
+        }
+    }
+    &__preview {
+        position: relative;
+        display: block;
+        max-width: 372px;
+        width: 100%;
+        height: 324px;
+        overflow: hidden;
+        img {
+            position: absolute;
+            display: block;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: .5;
+        }
+    }
+    &__title {
+        display: block;
+        position: absolute;
+        max-width: 320px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        transition: all .4s;
+    }
+    
+    &__number {
+        @include sq-bold(185px, 185px);
+        display: block;
+        position: absolute;
+        left: 26px;
+        top: 65px;
+        color: #fff;
+        opacity: .2;
+        transition: all .4s;
+    }
+    &__header {
+        @include sq-bold(36px, 36px);
+        color: #fff;
+        display: block;
+    }
+    &__details {
+        position: relative;
+        display: block;
+        padding: 60px 0 0 45px;
+        max-width: 350px;
+        width: 100%;
+        height: 300px;
+        text-align: left;
+        transition: all .4s;
+        overflow: hidden;
+        opacity: 0;
+    }
+    &__header-hover {
+        @include sq-bold(30px, 30px);
+        position: relative;
+        display: block;
+        padding-bottom: 60px;
+        color: #fff;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 60px;
+            left: 0;
+            width: 73px;
+            height: 1px;
+            border: 1px solid #11ffbd;
+        }
+    }
+    &__text-hover {
+        @include pr-reg(24px, 30px);
+        padding-right: 20px;
+        color: #fff;
+    }
+}

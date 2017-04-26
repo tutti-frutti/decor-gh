@@ -1,0 +1,27 @@
+.s-title {
+    text-align: center;
+    &._decor-white {
+        @include sq-bold(30px, 36px);
+        margin: 0 auto 101px;
+        max-width: 810px;
+        width: 100%;
+        color: #fff;
+        @media #{$mobile} {
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &._decor-black {
+        @include sq-bold(30px, 35px);
+        margin: 0 auto;
+        padding: 25px 0 20px;
+        max-width: 800px;
+        width: 100%;
+        color: #000;
+        @media #{$mobile} {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}

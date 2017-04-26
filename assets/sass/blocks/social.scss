@@ -1,0 +1,99 @@
+.social {
+    position: relative;
+    padding-bottom: 143px;
+    background: url('../img/bg-social.jpg') center / cover no-repeat;
+    @media #{$tablet} {
+        padding-bottom: 30px;
+    }
+    @media #{$mobile} {
+        padding-bottom: 30px;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        top: 188px;
+        left: 25px;
+        width: 32%;
+        height: 16px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        @media #{$tablet} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        top: 196px;
+        left: 0px;
+        width: 33.5%;
+        height: 1px;
+        background: #fff;
+        @media #{$tablet} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        &::before {
+        position: absolute;
+        content: '';
+        top: 25px;
+        right: 25px;
+        width: 32%;
+        height: 16px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+            @media #{$tablet} {
+                content: none;
+            }
+            @media #{$mobile} {
+            content: none;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        top: 33px;
+        right: 0px;
+        width: 33.5%;
+        height: 1px;
+        background: #fff;
+        @media #{$tablet} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+    }
+    }
+    h2 {
+        @include sq-bold(30px, 35px);
+        padding: 62px 0 31px;
+        text-align: center;
+        color: $text;
+        @media #{$mobile} {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &__list {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+    }
+    &__item {
+        @include list-inl(0 10px 0 10px);
+        a {
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+}

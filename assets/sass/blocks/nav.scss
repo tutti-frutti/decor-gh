@@ -1,0 +1,90 @@
+.nav {
+    &__list {}
+    &__item {
+        position: relative;
+        float: left;
+        margin-right: 34px;
+        @media #{$tablet} {
+            float: none;
+            display: inline-block;
+        }
+        @media #{$mobile} {
+            float: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        &._triangle {
+            &::before {
+                position: absolute;
+                content: '';
+                right: -11px;
+                top: 49%;
+                width: 9px;
+                height: 7px;
+                background: url('../img/ic-nav-triangle.png') 0 0 no-repeat;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            .nav__list-sub {
+                left: 0;
+                z-index: 1;
+                background: #171616;
+                @media #{$mobile} {
+                    background: #171616;
+                    left: initial;
+                    right: 0;
+                }
+            }
+        }
+        a {
+            @include pr-reg(16px,
+            16px);
+            display: block;
+            padding: 46px 0 41px 0;
+            color: #fff;
+            @media #{$tablet} {
+                padding: 15px;
+            }
+            @media #{$mobile} {
+                padding: 5px;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    // sub-menu
+    &__list-sub {
+        position: absolute;
+        left: -9999px;
+        max-width: 250px;
+        top: 70px;
+        @media #{$tablet} {
+            top: 50px;
+            text-align: left;
+        }
+        @media #{$mobile} {
+            top: 30px;
+            padding: 15px;
+            overflow: hidden;
+            text-align: right;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 250px;
+        }
+    }
+    &__item-sub {
+        border-bottom: 1px dotted #504e4e;
+        @media #{$mobile} {
+            border-bottom: 1px dotted #504e4e;
+        }
+        a {
+            display: block;
+            padding: 15px;
+            width: 100%;
+        }
+    }
+}

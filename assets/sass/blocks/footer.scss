@@ -1,0 +1,72 @@
+.footer {
+    @media #{$tablet} {
+        text-align: center;
+    }
+    @media #{$mobile} {
+        text-align: center;
+    }
+    &__block {
+        display: inline-block;
+        vertical-align: top;
+        &._logo {
+            width: 250px;
+            margin: 22px 43px 0 0;
+            @media #{$tablet} {
+                display: block;
+                margin: 10px auto;
+            }
+            @media #{$mobile} {
+                margin: 10px;
+            }
+        }
+        &._slogan {
+            @include pr-light(18px, 18px);
+            margin-top: 40px;
+            max-width: 360px;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            @media #{$tablet} {
+                display: block;
+                margin: 10px auto;
+                width: auto;
+            }
+            @media #{$mobile} {
+                margin: 10px;
+                width: auto;
+            }
+        }
+        &._tel {
+            position: relative;
+            margin: 24px 0 0 52px;
+            padding-left: 39px;
+            width: 300px;
+            @media #{$tablet} {
+                margin: 10px auto;
+            }
+            @media #{$mobile} {
+                margin: 10px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 48px;
+                height: 62px;
+                background: url('../img/ic-tel-logo.jpg') 0 0 no-repeat;
+            }
+        }
+    }
+    &__tel {
+        @include pr-bold(30px, 28px);
+        display: block;
+        position: relative;
+        color: #000;
+    }
+    &__hours {
+        @include pr-reg(14px, 14px);
+        padding-left: 30px;
+        text-align: center;
+    }
+}

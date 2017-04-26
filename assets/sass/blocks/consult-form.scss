@@ -1,0 +1,89 @@
+.consult-form {
+    position: relative;
+    margin-left: auto;
+    margin-right: 280px;
+    max-width: 490px;
+    width: 100%;
+    top: -13px;
+    @media #{$desktop} {
+        top: 0;
+        padding-top: 20px;
+        margin: 10px auto;
+        width: 90%;
+    }
+    @media #{$tablet} {
+        top: 0;
+        padding-top: 20px;
+        margin: 10px auto;
+        width: 90%;
+    }
+    @media #{$mobile} {
+        margin: 20px auto;
+        width: 90%;
+        top: 0;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        right: 72px;
+        bottom: 16px;
+        max-width: 618px;
+        width: 126%;
+        height: 182px;
+        border: 5px solid #5af5b4;
+        z-index: 0;
+        @media #{$tablet} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+    }
+    &__input {
+        margin-bottom: 10px;
+        input {
+            @include panton(18px, 44px);
+            position: relative;
+            padding: 0 30px;
+            width: 100%;
+            height: 44px;
+            border: 4px solid #77ffb0;
+            outline: none;
+            transition: all .3s;
+            z-index: 1;
+            &:focus {
+                border: 4px solid #13a37b;
+            }
+        }
+    }
+    &__button {
+//        padding-bottom: 80px;
+            padding-top: 18px;
+        button {
+            @include panton(22px, 39px);
+            position: relative;
+            max-width: 309px;
+            width: 100%;
+            height: 39px;
+            border: 0;
+            cursor: pointer;
+            color: #16ffbc;
+            background: #000;
+            transition: all .3s;
+            &:hover {
+                color: #55ffce;
+                background: #383838;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                top: -4px;
+                left: 6px;
+                max-width: 294px;
+                width: 100%;
+                height: 38px;
+                border: 1px solid #16ffbc;
+            }
+        }
+    }
+}

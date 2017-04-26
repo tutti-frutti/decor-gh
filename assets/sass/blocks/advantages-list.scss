@@ -1,0 +1,17 @@
+.advantages-list {
+    &__item {
+        display: table;
+        margin-bottom: 35px;
+    }
+    &__numb {
+        @include pr-bold(74px, 74px);
+        display: table-cell;
+        width: 115px;
+        padding-right: 15px;
+        color: #12ffbd;
+    }
+    &__text {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

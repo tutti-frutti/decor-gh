@@ -1,0 +1,128 @@
+.roundabout-slider {
+    position: relative;
+    margin: 0 auto;
+    max-width: 438px;
+    width: 100%;
+    height: 265px;
+    &__foto {
+        transform: rotate(45deg);
+        overflow: hidden;
+        > img {
+            max-width: 100%;
+            transform: rotate(-45deg) scale(1.45);
+            transform-origin: center;
+        }
+    }
+    &__text {
+        position: relative;
+        margin-top: 71px;
+        width: 740px;
+        left: -290px;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+        @media #{$tablet} {
+            width: 320px;
+            left: -80px;
+            }
+        @media #{$mobile} {
+            width: auto;
+            left: 0;
+        }
+        h4 {
+            @include pr-reg(24px, 45px);
+            padding-bottom: 15px;
+            color: #fff;
+        }
+        p {
+            @include pr-thinIt(20px, 24px);
+            position: relative;
+            color: #fff;
+            @media #{$tablet} {
+                font-size: 15px;
+                line-height: 21px;
+            }
+            @media #{$mobile} {
+                font-size: 15px;
+                line-height: 21px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                left: -40px;
+                top: -27px;
+                width: 54px;
+                height: 41px;
+                background: url('../img/ic-quotes-left.png') 0 0 no-repeat;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -35px;
+                right: -40px;
+                width: 54px;
+                height: 41px;
+                background: url('../img/ic-quotes-right.png') 0 0 no-repeat;
+                @media #{$desktop} {
+                right: 0px;
+            }
+                @media #{$tablet} {
+                    right: -30px;
+            }
+            }
+        }
+    }
+    .roundabout-in-focus {
+        transition: all .5s;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 35px;
+            left: 2px;
+            width: 170px;
+            height: 170px;
+            border: 1px solid #18ffab;
+            transform: rotate(45deg);
+        }
+        .roundabout-slider__foto {
+            width: 180px;
+            height: 180px;
+//            transform: rotate(-45deg) scale(1.45);
+        }
+        .roundabout-slider__text {
+            transition: all .5s;
+            opacity: 1;
+        }
+    }
+    .next,
+    .prev {
+        position: absolute;
+        top: 50%;
+        left: -150px;
+        @media #{$mobile} {
+            top: 100%;
+            left: 5px;
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: .65;
+        }
+    }
+    .next {
+        left: initial;
+        right: -150px;
+        @media #{$mobile} {
+            right: 5px;
+        }
+    }
+}
+
+ul.roundabout {
+    margin-top: 25px;
+    height: 265px;
+    li {
+        position: relative;
+        width: 180px;
+        height: 180px;
+    }
+}

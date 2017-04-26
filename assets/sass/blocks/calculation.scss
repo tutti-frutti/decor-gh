@@ -1,0 +1,38 @@
+.calculation {
+    margin-bottom: 39px;
+    height: 350px;
+    background: url('../img/bg-calculation.jpg') center / cover no-repeat;
+    @media #{$mobile} {
+        margin-bottom: 0;
+    }
+    &__wrapper {
+        h2,
+        h3 {
+            @include pr-ExBold(48px,
+            48px);
+            padding: 46px 0 6px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $text;
+            @media #{$mobile} {
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+        h3 {
+            margin: 0 auto;
+            padding: 0 0 37px 0;
+            font-size: 32px;
+            line-height: 39px;
+            max-width: 755px;
+            width: 100%;
+            @media #{$mobile} {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+    &__button {
+        text-align: center;
+    }
+}

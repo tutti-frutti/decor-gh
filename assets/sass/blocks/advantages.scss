@@ -1,0 +1,88 @@
+.advantages {
+    position: relative;
+    background: url('../img/bg-advantages.jpg') center 0 no-repeat;
+    &::before {
+        position: absolute;
+        content: '';
+        margin-left: -100px;
+        top: 105px;
+        left: 50%;
+        width: 170px;
+        height: 170px;
+        border: 1px solid #12ffbd;
+        transform: rotate(45deg);
+        @media #{$tablet} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        h2 {
+            @include sq-bold(36px,40px);
+            position: relative;
+            padding-top: 125px;
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            color: $text;
+            @media #{$tablet} {
+                padding-top: 30px;
+            }
+            @media #{$mobile} {
+                font-size: 20px;
+                line-height: 30px;
+                padding-top: 30px;
+            }
+            u {
+                display: block;
+                padding-bottom: 20px;
+                font-size: 22px;
+                letter-spacing: 0.3px;
+                text-decoration: none;
+            }
+        }
+        p {
+            @include pr-bold(24px,30px);
+            padding-bottom: 97px;
+            text-align: center;
+            color: $text;
+            @media #{$tablet} {
+                padding-bottom: 20px;
+            }
+            @media #{$mobile} {
+                padding-bottom: 20px;
+            }
+        }
+    }
+    &__descr {
+        &._left {
+            float: left;
+            margin-right: 30px;
+            width: 48%;
+            @media #{$desktop} {
+                padding: 5px;
+            }
+            @media #{$mobile} {
+                float: none;
+                margin-right: 0;
+                width: auto;
+            }
+        }
+        &._right {
+            float: right;
+            width: 48%;
+            @media #{$desktop} {
+                padding: 5px;
+            }
+            @media #{$mobile} {
+                float: none;
+                width: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.numbers {
+    h2 {
+        @include sq-bold(30px, 36px);
+        padding: 0px 0 32px;
+        margin: 0 auto;
+        max-width: 1020px;
+        width: 100%;
+        text-align: center;
+        color: $text;
+        @media #{$mobile} {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &__head {
+        @include sq-bold(19px, 48px);
+        position: relative;
+        display: block;
+        margin: 0 auto 45px;
+        padding-right: 35px;
+        max-width: 389px;
+        width: 100%;
+        height: 48px;
+        text-align: center;
+        color: #fff;
+        background: #169e51;
+        &::before {
+            position: absolute;
+            content: '';
+            right: 22px;
+            top: 17px;
+            width: 26px;
+            height: 26px;
+            background: url('../img/ic-numbers-triangle.jpg') 0 0 no-repeat;
+        }
+    }
+}

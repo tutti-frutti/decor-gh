@@ -1,0 +1,47 @@
+.get-consult {
+    padding: 79px 0 67px 270px;
+    background: url('../img/bg-get-consult.jpg') 0 45px no-repeat;
+    @media #{$desktop} {
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    @media #{$tablet} {
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    @media #{$mobile} {
+        text-align: center;
+        padding: 0;
+    }
+    &__wrapper {
+        h2 {
+            @include pr-ExBold(23px, 28px);
+            position: relative;
+            max-width: 410px;
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            color: #000;
+            z-index: 1;
+            @media #{$desktop} {
+                margin: 10px auto;
+            }
+            @media #{$tablet} {
+                margin: 10px auto;
+            }
+            @media #{$mobile} {
+                max-width: none;
+            }
+            u {
+                font-size: 48px;
+                text-decoration: none;
+                @media #{$mobile} {
+                    font-size: 30px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

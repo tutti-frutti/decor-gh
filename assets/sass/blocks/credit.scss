@@ -1,0 +1,56 @@
+.credit {
+    padding-bottom: 56px;
+    @media #{$mobile} {
+        padding-bottom: 20px;
+    }
+    
+    h2 {
+        @include sq-bold(30px, 30px);
+        padding: 70px 0 15px;
+        text-align: center;
+        color: $text;
+        @media #{$mobile} {
+            padding: 30px 0 10px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    p {
+        @include pr-reg(24px, 24px);
+        padding-bottom: 5px;
+        text-align: center;
+        color: #2e2e2e;
+        @media #{$mobile} {
+            font-size: 20px;
+        }
+    }
+    &__banks {
+        margin-top: 18px;
+        text-align: center;
+    }
+    &__bank-l {
+        display: inline-block;
+        position: relative;
+        margin-right: 20px;
+        width: 268px;
+        height: 98px;
+        border: 3px solid #099948;
+        cursor: pointer;
+        overflow: hidden;
+        @media #{$mobile} {
+            margin: 10px;
+        }
+        &:hover {
+            opacity: .65;
+        }
+        img {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+        }
+    }
+}

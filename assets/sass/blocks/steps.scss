@@ -1,0 +1,146 @@
+.steps {
+    position: relative;
+    padding-bottom: 102px;
+    background: url('../img/bg-steps.jpg') center / cover no-repeat;
+    @media #{$desktop} {
+        padding-bottom: 30px;
+    }
+    @media #{$tablet} {
+        padding-bottom: 30px;
+    }
+    @media #{$mobile} {
+        padding-bottom: 0;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        margin-left: -588px;
+        top: 419px;
+        left: 50%;
+        max-width: 1177px;
+        width: 100%;
+        height: 158px;
+        background: url('../img/ic-steps-line.png') 0 0 no-repeat;
+        @media #{$desktop} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+        @media #{$tablet} {
+            content: none;
+        }
+    }
+    &__wrapper {
+        h2 {
+            @include sq-bold(32px, 35px);
+            position: relative;
+            padding: 102px 0 95px;
+            margin: 0 auto;
+            max-width: 635px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            @media #{$tablet} {
+                padding: 30px 0 20px;
+            }
+            @media #{$mobile} {
+                padding: 20px 0;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                right: -71px;
+                bottom: 68px;
+                max-width: 422px;
+                width: 100%;
+                height: 124px;
+                background: url('../img/ic-title-steps.png') 0 0 no-repeat;
+                @media #{$tablet} {
+                    content: none;
+                }
+                @media #{$mobile} {
+                    content: none;
+                }
+            }
+        }
+    }
+    &__inner {
+        text-align: center;
+    }
+    &__step-1,
+    &__step-3 {
+        position: relative;
+        display: inline-block;
+        max-width: 340px;
+        width: 100%;
+        height: 460px;
+        vertical-align: top;
+        text-align: center;
+        overflow: hidden;
+        z-index: 1;
+        h3 {
+            @include pr-reg(26px, 34px);
+            padding-bottom: 24px;
+            color: #fff;
+        }
+        p {
+            @include pr-thin(18px,
+            20px);
+            color: #fff;
+        }
+        figure {
+            margin: 0 auto 33px;
+            width: 230px;
+            height: 230px;
+            overflow: hidden;
+        }
+    }
+    &__step-3 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    &__step-2 {
+        position: relative;
+        display: inline-block;
+        margin: 0 100px;
+        max-width: 260px;
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: top;
+        z-index: 1;
+        @media #{$desktop} {
+            margin: 20px 70px;
+        }
+        @media #{$tablet} {
+//            margin: 20px 50px;
+            display: block;
+            margin: 30px auto;
+        }
+        @media #{$mobile} {
+            margin: 0 auto 30px;
+        }
+        h3 {
+            @include pr-reg(26px,
+            28px);
+            padding-bottom: 10px;
+            color: #fff;
+        }
+        p {
+            @include pr-thin(18px,
+            20px);
+            padding-bottom: 45px;
+            color: #fff;
+        }
+        figure {
+            margin: 0 auto;
+            width: 230px;
+            height: 230px;
+            overflow: hidden;
+        }
+    }
+}

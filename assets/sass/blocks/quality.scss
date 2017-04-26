@@ -1,0 +1,88 @@
+.quality {
+    position: relative;
+    margin-bottom: 56px;
+    background: url('../img/bg-quality.png') 0 0 / cover no-repeat;
+    
+    @media #{$mobile} {
+        padding-bottom: 30px;
+        margin-bottom: 0;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        margin-left: -154px;
+        left: 54%;
+        top: -45px;
+        width: 161px;
+        height: 85px;
+        background: url('../img/ic-quality-triangle.png') 0 0 no-repeat;
+        @media #{$desktop} {
+             content: none;
+        }
+        @media #{$tablet} {
+            content: none;
+        }
+        @media #{$mobile} {
+            content: none;
+        }
+    }
+    h2 {
+        @include sq-bold(36px, 38px);
+        max-width: 1105px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 0 2px;
+        text-align: center;
+        color: #fff;
+        @media #{$mobile} {
+            padding-top: 20px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    p {
+        @include pr-reg(26px, 24px);
+        padding-bottom: 51px;
+        text-align: center;
+        color: #fff;
+        @media #{$mobile} {
+            padding-bottom: 30px;
+            font-size: 20px;
+        }
+    }
+    &__list {
+        font-size: 0;
+        @media #{$desktop} {
+            text-align: center;
+        }
+        @media #{$tablet} {
+            text-align: center;
+        }
+    }
+    &__item {
+        display: inline-block;
+        margin-right: 20px;
+        max-width: 353px;
+        width: 100%;
+        height: 267px;
+        border: 7px solid #efefef;
+        overflow: hidden;
+        @media #{$desktop} {
+            margin: 20px;
+        }
+        @media #{$tablet} {
+            margin: 20px;
+        }
+        @media #{$mobile} {
+            display: block;
+            height: auto;
+            margin:0 auto 15px;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+            @media #{$mobile} {
+                margin: 0 auto 15px;
+            }
+        }
+    }
+}

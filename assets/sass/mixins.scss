@@ -1,0 +1,69 @@
+@mixin pr-reg($font-size, $line-height) {
+font-family: 'Proxima Nova Rg';
+font-weight: normal;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin pr-bold($font-size, $line-height) {
+font-family: 'Proxima Nova Rg';
+font-weight: bold;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin pr-ExBold($font-size, $line-height) {
+font-family: 'Proxima Nova Th';
+font-weight: 800;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin pr-thin($font-size, $line-height) {
+font-family: 'Proxima Nova Th';
+font-weight: 100;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin pr-light($font-size, $line-height) {
+font-family: 'Proxima Nova Th';
+font-weight: 300;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin pr-thinIt($font-size, $line-height) {
+font-family: 'Proxima Nova Th';
+font-weight: 100;
+font-style: italic;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin sq-bold($font-size, $line-height) {
+font-family: 'Squares';
+font-weight: bold;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin panton($font-size, $line-height) {
+font-family: 'Panton';
+font-weight: normal;
+font-style: normal;
+font-size: $font-size;
+line-height: $line-height;
+}
+
+@mixin list-inl($margin) {
+    display: inline-block;
+    list-style: none;
+    margin: $margin;
+}

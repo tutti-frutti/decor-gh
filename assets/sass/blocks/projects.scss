@@ -1,0 +1,49 @@
+.projects {
+    &__wrapper {
+        padding-bottom: 72px;
+        @media #{$mobile} {
+            padding-bottom: 0px;
+        }
+        h2 {
+            @include sq-bold(32px, 40px);
+            position: relative;
+            margin: 0 auto;
+            padding: 91px 0 100px;
+            max-width: 1020px;
+            width: 100%;
+            text-align: center;
+            color: #0e0e0e;
+            @media #{$tablet} {
+                padding: 30px 0;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 422px;
+                height: 171px;
+                top: 56px;
+                right: -28px;
+                background: url('../img/ic-title-square.png') 0 0 no-repeat;
+                @media #{$desktop} {
+                    content: none;
+                }
+                @media #{$tablet} {
+                    content: none;
+                }
+                @media #{$mobile} {
+                    content: none;
+                }
+            }
+            @media #{$mobile} {
+                padding: 30px 0;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+        &._wide-title {
+            h2 {
+                max-width: 1070px;
+            }
+        }
+    }
+}

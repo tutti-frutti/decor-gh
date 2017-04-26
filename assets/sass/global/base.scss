@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+main {
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+ul, h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+//        text-decoration: underline;
+        text-decoration: none;
+    }
+}
+
+a {
+    img {
+        border: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+.center {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    &._width {
+        width: 100%;
+    }
+    @media #{$mobile} {
+        width: 98%;
+    }
+    @media #{$tablet} {
+        width: 98%;
+    }
+}
+
+.center-middle {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    &._width {
+        width: 100%;
+    }
+//    @media #{$tablet} {
+//        width: 98%;
+//    }
+}
+
+.center-wide {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    &._width {
+        width: 100%;
+    }
+    @media #{$mobile} {
+        width: 98%;
+    }
+    @media #{$tablet} {
+        width: 98%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Panton';
+    color: #434343;
+    font-size: 18px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    }
+::-moz-placeholder          {
+    font-family: 'Panton';
+    color: #434343;
+    font-size: 18px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    }/* Firefox 19+ */
+:-moz-placeholder           {
+    font-family: 'Panton';
+    color: #434343;
+    font-size: 18px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}/* Firefox 18- */
+    :-ms-input-placeholder      {
+    font-family: 'Panton';
+    color: #434343;
+    font-size: 18px;
+    font-weight: 300;
+    text-overflow:ellipsis;
+}

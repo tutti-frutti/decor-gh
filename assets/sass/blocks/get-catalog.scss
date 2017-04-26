@@ -1,0 +1,17 @@
+.get-catalog {
+    height: 718px;
+    background: url('../img/bg-get-catalog.jpg') center / cover no-repeat;
+    &._playroom-bg {
+        background: url('../img/bg-playroom.jpg') center / cover no-repeat;
+    }
+    &._garderob-bg {
+        background: url('../img/bg-garderob.jpg') center / cover no-repeat;
+    }
+    &._shkaff-bg {
+        background: url('../img/bf-shkaff.jpg') center / cover no-repeat;
+    }
+    @media #{$mobile} {
+        height: auto;
+        padding: 0 0 30px;
+    }
+}

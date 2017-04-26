@@ -1,0 +1,43 @@
+.complectation {
+    padding-bottom: 95px;
+    background: url('../img/bg-complectation.jpg') center center / cover no-repeat;
+    @media #{$mobile} {
+        padding-bottom: 30px;
+    }
+    h2 {
+        @include sq-bold(24px, 30px);
+        position: relative;
+        padding: 120px 0 122px;
+        margin: 0 auto;
+        max-width: 920px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        @media #{$tablet} {
+            padding: 30px 0;
+        }
+        @media #{$mobile} {
+            padding: 30px 0;
+            font-size: 20px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 91px;
+            right: -90px;
+            max-width: 600px;
+            width: 100%;
+            height: 150px;
+            background: url('../img/ic-complectation-square.png') 0 0 no-repeat;
+            @media #{$desktop} {
+                content: none;
+            }
+            @media #{$tablet} {
+                content: none;
+            }
+            @media #{$mobile} {
+                content: none;
+            }
+        }
+    }
+}
